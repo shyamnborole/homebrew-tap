@@ -5,20 +5,20 @@
 class AzSsh < Formula
   desc "A fast, beautiful TUI for managing Azure VMs and SSH connections."
   homepage "https://github.com/shyamnborole/azure-ssh-tui"
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shyamnborole/azure-ssh-tui/releases/download/v1.0.1/azure-ssh-tui_Darwin_x86_64.tar.gz"
-      sha256 "b1827ea7d1504f67cb8a87d95218e541827ecedbb5267cc1e27748bffff76273"
+      url "https://github.com/shyamnborole/azure-ssh-tui/releases/download/v1.0.2/azure-ssh-tui_Darwin_x86_64.tar.gz"
+      sha256 "a657ce1d90a289b6e01c428c937ac74e9bc8b6390ec469a03d1624ba61a00439"
 
       define_method(:install) do
         bin.install "az-ssh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shyamnborole/azure-ssh-tui/releases/download/v1.0.1/azure-ssh-tui_Darwin_arm64.tar.gz"
-      sha256 "658d0c17f6895c861351919f8e36005c90b3bc6685b6842527800ba7a71e2cfa"
+      url "https://github.com/shyamnborole/azure-ssh-tui/releases/download/v1.0.2/azure-ssh-tui_Darwin_arm64.tar.gz"
+      sha256 "01b7cdec4e1d0c8d10ecf0704644073c59ea70b44aaa404c1d42e035276891cc"
 
       define_method(:install) do
         bin.install "az-ssh"
@@ -28,15 +28,15 @@ class AzSsh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shyamnborole/azure-ssh-tui/releases/download/v1.0.1/azure-ssh-tui_Linux_x86_64.tar.gz"
-      sha256 "8685d7fc6469b32a7e5b5886e0e9e2df17b03a1b2dbcd07e03e5fad69077cbaf"
+      url "https://github.com/shyamnborole/azure-ssh-tui/releases/download/v1.0.2/azure-ssh-tui_Linux_x86_64.tar.gz"
+      sha256 "342c2ff9dc75792b1c0b35bac024e8031f79e8c1fc2dd50965efc76f59ec310c"
       define_method(:install) do
         bin.install "az-ssh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shyamnborole/azure-ssh-tui/releases/download/v1.0.1/azure-ssh-tui_Linux_arm64.tar.gz"
-      sha256 "fc783ec589a1650834e4bbcdcb7f8f1115985f9b12b4c65f033af0bd91822442"
+      url "https://github.com/shyamnborole/azure-ssh-tui/releases/download/v1.0.2/azure-ssh-tui_Linux_arm64.tar.gz"
+      sha256 "549cf3fd676e1deea59756e580d3d1dc501e1201af2c69a64cce8c3210342e8f"
       define_method(:install) do
         bin.install "az-ssh"
       end
