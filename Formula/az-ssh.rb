@@ -10,7 +10,7 @@ class AzSsh < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/shyamnborole/azure-ssh-tui/releases/download/v1.0.0/azure-ssh-tui_Darwin_x86_64.tar.gz"
-      sha256 "9146d81cfc860e73355ff307a2686b3c3410c4342f7d3bd055b2e18b3e0c9ed3"
+      sha256 "84fa539572bb1d36de0d621c55e3d577bedaf81b20811a5157bef4324efeaf0a"
 
       define_method(:install) do
         bin.install "az-ssh"
@@ -18,7 +18,7 @@ class AzSsh < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/shyamnborole/azure-ssh-tui/releases/download/v1.0.0/azure-ssh-tui_Darwin_arm64.tar.gz"
-      sha256 "53be6e6c1e6db3285924a87966ed215652a5e27ba46a11d07087364578d37ff0"
+      sha256 "de6badab1245428a8d61ec456a03d588a731b2e6f7e465dddb6220b7718199ad"
 
       define_method(:install) do
         bin.install "az-ssh"
@@ -29,14 +29,14 @@ class AzSsh < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/shyamnborole/azure-ssh-tui/releases/download/v1.0.0/azure-ssh-tui_Linux_x86_64.tar.gz"
-      sha256 "5921324ae666c44594ac5e6590546a3efa6659433f844151b07fd858e289c197"
+      sha256 "9b95a75033b4644e2684a523339ed3d01ef373df3aac68698ac63c27fb57106c"
       define_method(:install) do
         bin.install "az-ssh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/shyamnborole/azure-ssh-tui/releases/download/v1.0.0/azure-ssh-tui_Linux_arm64.tar.gz"
-      sha256 "4d54c9d27d5002f796adcc23b4eaffc51dba7d34617fa0aa72a8bcb3f53f2fe4"
+      sha256 "bba7e8dca1f8a856547911838cc67577b914577d2c49aa2c23c0e14b8061cdac"
       define_method(:install) do
         bin.install "az-ssh"
       end
